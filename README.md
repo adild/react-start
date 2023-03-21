@@ -52,3 +52,29 @@ const About = () => {
 
 export default About;
 ```
+
+## routing
+  
+> Loading different components when different urls are hit.
+  >> instell - npm install react-router-dom
+
+> Add the imports in App.js , here we add the different routes.
+```
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/login' element={<Login />} />
+        <Route path='/signup' element={<Signup />} />
+        <Route path='/about' element={<About />} />
+
+      </Routes>
+    </BrowserRouter>
+    )
+}
+
+export default App;
+```
